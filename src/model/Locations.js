@@ -76,7 +76,7 @@ export const LOCATION_DATA = {
 const urlParams = new URLSearchParams(window.location.search)
 
 class Locations {
-	selectedLocation = LOCATION_NAMES.WATSON_PARK
+	selectedLocation = LOCATION_NAMES.THE_DUMPS
 
 	get current() {
 		return LOCATION_DATA[this.selectedLocation]

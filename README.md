@@ -1,5 +1,7 @@
 # Paragliding Weather Checker
 
+https://lukerymarz.com/pgweather/
+
 Collects together various weather reports on a single page. Modify `src/model/Locations.js` to add more location data
 
 Dev steps:
