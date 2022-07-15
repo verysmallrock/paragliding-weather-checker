@@ -10,11 +10,11 @@ export default class WeatherGovForecast extends Component {
 	}
 
 	render() {
-		return <React.Fragment>
+		return <div style={{ 'max-width': '100%' }}>
 			<h3>{ this.props.title }</h3>
 			<a href={ this.href }>
-				<img alt='weather.gov forecast' src={ this.imageHref } />
+				<img style={{ width: '100%', 'max-width': '960px' }} alt='weather.gov forecast' src={ this.imageHref } />
 			</a>
-		</React.Fragment>
+		</div>
 	}
 }

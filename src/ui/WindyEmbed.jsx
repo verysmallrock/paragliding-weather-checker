@@ -1,4 +1,5 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
+import S from './WindyEmbed.module.css'
 
 export default class WindyEmbed extends Component {
 	get embedUrl() {
@@ -7,11 +8,13 @@ export default class WindyEmbed extends Component {
 	}
 
 	render() {
-		return <iframe 
-			title={ `${this.props.location.name}` }
-			width='650' 
-			height='450'
-			src={ this.embedUrl } 
-		/>
+		return <div className={ S.root }
+			style={{ width: '650px', height: '487px' }}
+		>
+			<iframe 
+				title={ `${this.props.location.name}` }
+				src={ this.embedUrl } 
+			/>
+		</div>
 	}
 }

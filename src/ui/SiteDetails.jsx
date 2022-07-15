@@ -1,5 +1,6 @@
 import React from 'react'
 import S from './SiteDetails.module.css'
+import IframeEmbed from './IframeEmbed'
 import VideoFeed from './VideoFeed'
 import WeatherGovForecast from './WeatherGovForecast'
 import WeewxFeed from './WeewxFeed'
@@ -51,7 +52,8 @@ export default class SiteDetails extends React.Component {
 	}
 
 	renderIframe(data, index) {
-		return <iframe key={ `entry${index}` } title={ data.url } className={ S.iframe } src={ data.url } width={ data.width } height={ data.height } />
+		
+		return <IframeEmbed key={ `entry${index}` } title={ data.url } className={ S.iframe } data={ data } />
 	}
 
 	renderWeewxFeed(data, index) {

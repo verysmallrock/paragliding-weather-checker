@@ -46,8 +46,8 @@ export default class WeewxFeed extends Component {
 			<br />
 			<Stat name='Wind Direction' value={ `${this.feed.current?.windcompass} (${this.feed.current?.winddir})`} />
 			<br />
-			<img alt='Wind daily forecast' src={ `${this.baseUrl}daywind.png`} />
-			<img alt='Temp and dew point' src={ `${this.baseUrl}daytempdew.png`} />
+			<img style={{ width: '100%', 'max-width': '560px' }} alt='Wind daily forecast' src={ `${this.baseUrl}daywind.png`} />
+			<img style={{ width: '100%', 'max-width': '560px' }} alt='Temp and dew point' src={ `${this.baseUrl}daytempdew.png`} />
 		</div>
 	}
 }
