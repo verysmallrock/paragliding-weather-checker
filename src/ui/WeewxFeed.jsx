@@ -37,7 +37,7 @@ export default class WeewxFeed extends Component {
 
 	render() {
 		return <div>
-			<a href={ this.baseUrl } target='_blank'><h3>{ this.feed.site }</h3></a>
+			<a href={ this.baseUrl } target='_blank' rel="noreferrer" ><h3>{ this.feed.site }</h3></a>
 			{ this.props?.data?.subtitle && <h4>{ this.props?.data?.subtitle }</h4> }
 			<Stat name='Current Temp' value={ this.feed.current?.outTemp } />
 			<br />
@@ -46,8 +46,8 @@ export default class WeewxFeed extends Component {
 			<br />
 			<Stat name='Wind Direction' value={ `${this.feed.current?.windcompass} (${this.feed.current?.winddir})`} />
 			<br />
-			<img src={ `${this.baseUrl}daywind.png`} />
-			<img src={ `${this.baseUrl}daytempdew.png`} />
+			<img alt='Wind daily forecast' src={ `${this.baseUrl}daywind.png`} />
+			<img alt='Temp and dew point' src={ `${this.baseUrl}daytempdew.png`} />
 		</div>
 	}
 }

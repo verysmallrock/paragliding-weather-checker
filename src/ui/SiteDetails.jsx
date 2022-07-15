@@ -28,7 +28,6 @@ export default class SiteDetails extends React.Component {
 	}
 
 	renderLocationOptions() {
-		const options = []
 		return Object.keys(LOCATION_DATA).map((location) => <option key={ location } value={ location }>{ LOCATION_DATA[location].name }</option>)
 	}
 

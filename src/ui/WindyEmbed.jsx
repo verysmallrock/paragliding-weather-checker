@@ -8,6 +8,7 @@ export default class WindyEmbed extends Component {
 
 	render() {
 		return <iframe 
+			title={ `${this.props.location.name}` }
 			width='650' 
 			height='450'
 			src={ this.embedUrl } 

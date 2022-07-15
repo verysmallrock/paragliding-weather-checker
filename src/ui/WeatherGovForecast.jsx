@@ -13,7 +13,7 @@ export default class WeatherGovForecast extends Component {
 		return <React.Fragment>
 			<h3>{ this.props.title }</h3>
 			<a href={ this.href }>
-				<img src={ this.imageHref } />
+				<img alt='weather.gov forecast' src={ this.imageHref } />
 			</a>
 		</React.Fragment>
 	}
