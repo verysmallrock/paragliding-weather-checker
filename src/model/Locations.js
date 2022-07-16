@@ -1,6 +1,7 @@
 export const LOCATION_NAMES = {
 	ED_LEVIN_300: 'edlevin300',
 	ED_LEVIN_600: 'edlevin600',
+	ED_LEVIN_1750: 'edlevin1750',
 	ED_LEVIN_LZ: 'edlevinlz',
 	THE_DUMPS: 'thedumps',
 	WATSON_PARK: 'watsonpark'
@@ -25,6 +26,20 @@ export const LOCATION_DATA = {
 		latitude: '37.461261',
 		longitude: '-121.860443',
 		windyMapZoom: 11,
+	},
+	[LOCATION_NAMES.ED_LEVIN_1750]: {
+		name: "Ed Levin 1750' (Milpitas, CA)",
+		latitude: '37.475580',
+		longitude: '-121.860816',
+		windyMapZoom: 11,
+		entries: [
+			{ 
+				type: ENTRY_TYPES.IFRAME,
+				url: 'http://windslammer.wingsofrogallo.org/WindSlammer/', 
+				width: 970, 
+				height: 836 
+			},			
+		]
 	},
 	[LOCATION_NAMES.ED_LEVIN_LZ]: {
 		name: "Ed Levin LZ (Milpitas, CA)",
