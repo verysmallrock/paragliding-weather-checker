@@ -1,0 +1,15 @@
+.root {
+	position: relative;
+	width: 853px;
+	
+}
+
+.image {
+	position: relative;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-size: contain;
+    background-repeat: no-repeat;
+}

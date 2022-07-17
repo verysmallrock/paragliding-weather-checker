@@ -8,7 +8,7 @@ export default class VideoFeed extends Component {
 			<iframe title={ `video-${this.props.url}` }
 				src={ this.props.url }
 				frameborder="0"
-    			allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    			allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
 		</div>
 	}
 }

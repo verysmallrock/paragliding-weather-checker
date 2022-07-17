@@ -9,6 +9,8 @@ export const LOCATION_NAMES = {
 
 export const ENTRY_TYPES = {
 	WEEWX: 'weewx',
+	LINK: 'link',
+	IMAGE: 'image',
 	YOUTUBE: 'youtube',
 	IFRAME: 'iframe',
 	WATHER_GOV_FORECAST: 'weathergovforecast',
@@ -34,10 +36,9 @@ export const LOCATION_DATA = {
 		windyMapZoom: 11,
 		entries: [
 			{ 
-				type: ENTRY_TYPES.IFRAME,
-				url: 'http://windslammer.wingsofrogallo.org/WindSlammer/', 
-				width: 970, 
-				height: 836 
+				type: ENTRY_TYPES.LINK,
+				url: 'http://windslammer.wingsofrogallo.org/WindSlammer/',
+				label: 'WindSlammer'
 			},			
 		]
 	},
@@ -55,7 +56,7 @@ export const LOCATION_DATA = {
 		entries: [
 			{ 
 				type: ENTRY_TYPES.WEEWX,
-				subtitle: 'Nearby location (~1 mile south)',
+				subtitle: 'Nearby location (~2 miles south)',
 				jsonUrl: 'https://www.mixdivr.org/wx/weewx/belchertown/json/weewx_data.json',
 				url: 'https://www.mixdivr.org/wx/weewx/'
 			},
@@ -77,7 +78,11 @@ export const LOCATION_DATA = {
 				type: ENTRY_TYPES.YOUTUBE, 
 				url: 'https://www.youtube.com/embed/L6e1EEA-dQI'
 			},
-			
+			{ 
+				type: ENTRY_TYPES.IMAGE, 
+				title: 'Fort Funston (~2 miles north)',
+				src: 'https://www.flyfortfunston.org/archive.flyfunston.org/newwebcam/panolarge.jpg'
+			},			
 		]
 	},
 	[LOCATION_NAMES.WATSON_PARK]: {

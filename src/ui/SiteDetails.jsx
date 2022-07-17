@@ -1,6 +1,8 @@
 import React from 'react'
 import S from './SiteDetails.module.css'
 import IframeEmbed from './IframeEmbed'
+import ImageFeed from './ImageFeed'
+import Link from './Link'
 import VideoFeed from './VideoFeed'
 import WeatherGovForecast from './WeatherGovForecast'
 import WeewxFeed from './WeewxFeed'
@@ -51,9 +53,16 @@ export default class SiteDetails extends React.Component {
 		return <VideoFeed key={ `entry${index}` } url={ data.url } width={ data.width } height={ data.height } />
 	}
 
+	renderLink(data, index) {
+		return <Link key={ `entry${index}` } url={ data.url } label={ data.label } />
+	}
+
 	renderIframe(data, index) {
-		
 		return <IframeEmbed key={ `entry${index}` } title={ data.url } className={ S.iframe } data={ data } />
+	}
+
+	renderImage(data, index) {
+		return <ImageFeed key={ `entry${index}` } src={ data.src } title={ data.title } />
 	}
 
 	renderWeewxFeed(data, index) {
@@ -71,6 +80,8 @@ export default class SiteDetails extends React.Component {
 	renderEntries() {
 		const renderMap = {
 			[ENTRY_TYPES.IFRAME]: this.renderIframe.bind(this),
+			[ENTRY_TYPES.IMAGE]: this.renderImage.bind(this),
+			[ENTRY_TYPES.LINK]: this.renderLink.bind(this),
 			[ENTRY_TYPES.WATHER_GOV_FORECAST]: this.renderWeatherGovEntry.bind(this),
 			[ENTRY_TYPES.WEEWX]: this.renderWeewxFeed.bind(this),
 			[ENTRY_TYPES.YOUTUBE]: this.renderVideo.bind(this),
