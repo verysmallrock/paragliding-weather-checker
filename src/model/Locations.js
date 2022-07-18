@@ -80,7 +80,7 @@ export const LOCATION_DATA = {
 			},
 			{ 
 				type: ENTRY_TYPES.IMAGE, 
-				title: 'Fort Funston (~2 miles north)',
+				title: 'Fort Funston (~5 miles north)',
 				src: 'https://www.flyfortfunston.org/archive.flyfunston.org/newwebcam/panolarge.jpg'
 			},			
 		]
